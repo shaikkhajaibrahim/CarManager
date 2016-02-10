@@ -13,7 +13,7 @@ namespace CarManager.Web.Controllers
 {
 	public class CarAsyncController : ApiController
 	{
-		private static readonly ICarRepository _carRepository = new InMemoryCarRepository();
+		private static readonly ICarRepository _carRepository = new DbCarRepository();
 
 		public IEnumerable<Car> Get()
 		{
